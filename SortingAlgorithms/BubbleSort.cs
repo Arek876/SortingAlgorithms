@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static SortingAlgorithms.Form1;
 
 namespace SortingAlgorithms
 {
-    class BubbleSort
+    class BubbleSort : Sortowania
     {
-        public void Sort(int[] data) 
+        public override void Sort(int[] data) 
         { 
             for(int i = 0;i<data.Length; i++)
             {

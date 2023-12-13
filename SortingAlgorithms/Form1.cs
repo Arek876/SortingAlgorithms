@@ -17,12 +17,67 @@ namespace SortingAlgorithms
         {
             InitializeComponent();
         }
-        Random rand=new Random();
-        Stopwatch time= new Stopwatch();
+        /*Random rand=new Random();
+        Stopwatch time= new Stopwatch();*/
 
         private void startButton_Click(object sender, EventArgs e)
         {
-            BubbleSort bSort = new BubbleSort();
+            int amount = (int)numericUpDownAmount.Value;
+            int from = (int)numericUpDownFrom.Value;
+            int to = (int)numericUpDownTo.Value;
+
+            Random rand = new Random();
+
+            int[] data= new int[amount];
+
+            List<Sortowania> sorts = new List<Sortowania>()
+            {
+                new BubbleSort(),
+                new InsertionSort(),
+                new SelectionSort(),
+                new QuickSort()
+            };
+
+            foreach(Sortowania sort in sorts)
+            {
+                for (int j = 0; j < amount; j++)
+                {
+                    data[j] = rand.Next(from, to + 1);
+                }
+                for (int j = 0; j < amount; j++)
+                {
+                    Console.WriteLine(data[j]);
+                }
+                if(sort.GetType().Name!="QuickSort")
+                {
+                    sort.Sort(data);
+                }
+                else
+                {
+                    sort.Sort2(data, 0, data.Length - 1);
+                }
+                for (int j = 0; j < amount; j++)
+                {
+                    Console.WriteLine($"{sort.GetType().Name}: {data[j]}");
+                }
+            }
+            MessageBox.Show("Gotowe");
+        }
+        public abstract class Sortowania
+        {
+            public virtual void Sort(int[] data)
+            {
+
+            }
+            public virtual void Sort2(int[] data,int left, int right)
+            {
+
+            }
+        }
+    }
+}
+
+/*            BubbleSort bSort = new BubbleSort();
 
             int amount=int.Parse(textAmount.Text);
             int From= int.Parse(textFrom.Text);
@@ -40,7 +95,4 @@ namespace SortingAlgorithms
             time.Stop();
 
             MessageBox.Show($"Amount: {textAmount.Text}");
-            MessageBox.Show($"time:{time.Elapsed}");
-        }
-    }
-}
+            MessageBox.Show($"time:{time.Elapsed}");*/

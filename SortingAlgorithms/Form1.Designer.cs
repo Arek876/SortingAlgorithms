@@ -34,16 +34,19 @@
             this.startButton = new System.Windows.Forms.Button();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
-            this.textAmount = new System.Windows.Forms.TextBox();
-            this.textFrom = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textTo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.numericUpDownAmount = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownFrom = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownTo = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAmount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFrom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTo)).BeginInit();
             this.SuspendLayout();
             // 
             // startButton
@@ -81,20 +84,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Ilość:";
             // 
-            // textAmount
-            // 
-            this.textAmount.Location = new System.Drawing.Point(30, 325);
-            this.textAmount.Name = "textAmount";
-            this.textAmount.Size = new System.Drawing.Size(100, 22);
-            this.textAmount.TabIndex = 3;
-            // 
-            // textFrom
-            // 
-            this.textFrom.Location = new System.Drawing.Point(30, 384);
-            this.textFrom.Name = "textFrom";
-            this.textFrom.Size = new System.Drawing.Size(100, 22);
-            this.textFrom.TabIndex = 5;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -103,13 +92,6 @@
             this.label2.Size = new System.Drawing.Size(25, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = "Od";
-            // 
-            // textTo
-            // 
-            this.textTo.Location = new System.Drawing.Point(147, 384);
-            this.textTo.Name = "textTo";
-            this.textTo.Size = new System.Drawing.Size(100, 22);
-            this.textTo.TabIndex = 7;
             // 
             // label3
             // 
@@ -164,26 +146,50 @@
             this.checkedListBox2.Size = new System.Drawing.Size(120, 55);
             this.checkedListBox2.TabIndex = 11;
             // 
+            // numericUpDownAmount
+            // 
+            this.numericUpDownAmount.Location = new System.Drawing.Point(30, 326);
+            this.numericUpDownAmount.Name = "numericUpDownAmount";
+            this.numericUpDownAmount.Size = new System.Drawing.Size(120, 22);
+            this.numericUpDownAmount.TabIndex = 12;
+            // 
+            // numericUpDownFrom
+            // 
+            this.numericUpDownFrom.Location = new System.Drawing.Point(30, 384);
+            this.numericUpDownFrom.Name = "numericUpDownFrom";
+            this.numericUpDownFrom.Size = new System.Drawing.Size(66, 22);
+            this.numericUpDownFrom.TabIndex = 13;
+            // 
+            // numericUpDownTo
+            // 
+            this.numericUpDownTo.Location = new System.Drawing.Point(165, 384);
+            this.numericUpDownTo.Name = "numericUpDownTo";
+            this.numericUpDownTo.Size = new System.Drawing.Size(67, 22);
+            this.numericUpDownTo.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1362, 652);
+            this.Controls.Add(this.numericUpDownTo);
+            this.Controls.Add(this.numericUpDownFrom);
+            this.Controls.Add(this.numericUpDownAmount);
             this.Controls.Add(this.checkedListBox2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textTo);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textFrom);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textAmount);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.startButton);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAmount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFrom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,15 +200,15 @@
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textAmount;
-        private System.Windows.Forms.TextBox textFrom;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textTo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckedListBox checkedListBox2;
+        private System.Windows.Forms.NumericUpDown numericUpDownAmount;
+        private System.Windows.Forms.NumericUpDown numericUpDownFrom;
+        private System.Windows.Forms.NumericUpDown numericUpDownTo;
     }
 }
 
